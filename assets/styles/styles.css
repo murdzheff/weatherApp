@@ -6,16 +6,58 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#background {
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vh;
+    z-index: 1;
 }
 
 main {
     min-height: 50vh;
     min-width: 40vh;
+    z-index: 2;
 }
 
 main>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
     border-radius: 10px;
     min-height: 50vh;
-    min-width: 40vh;
+    min-width: 50vh;
     background-color: whitesmoke;
+    gap: 10px;
+    z-index: 2;
+    background-color: whitesmoke;
+    opacity: 0.5;
+}
+
+main>div h2,h1,h3,span {
+    z-index: 2;
+}
+
+#forecast {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#forecastGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow: auto;
+}
+
+#dayCard {
+    max-height: 50px;
+    max-width: 70px;
 }
