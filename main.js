@@ -36,10 +36,10 @@ request.onload = () => {
         bg.src = "./assets/weatherbg/sunny.mp4";
     }
 
-    let dayCard = document.createElement("div");
+    
 
     request.response.days.forEach(element => {
-        
+        let dayCard = document.createElement("div");
         dayCard.id = "dayCard";
 
         let date = document.createElement("h4");
@@ -57,8 +57,8 @@ request.onload = () => {
         let maxTemp = document.createElement("h5");
         let minTemp = document.createElement("h5");
 
-        maxTemp.innerText = `${element.tempmax} °C`;
-        minTemp.innerText = `${element.tempmin} °C`;
+        maxTemp.innerText = `Max: ${element.tempmax} °C`;
+        minTemp.innerText = `Min: ${element.tempmin} °C`;
 
         tempContainer.append(maxTemp,minTemp);
 

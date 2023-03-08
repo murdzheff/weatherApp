@@ -19,7 +19,7 @@ body {
 
 main {
     min-height: 50vh;
-    min-width: 40vh;
+    min-width: 60vh;
     z-index: 2;
 }
 
@@ -29,13 +29,13 @@ main>div {
     align-items: center;
     align-content: center;
     border-radius: 10px;
-    min-height: 50vh;
-    min-width: 50vh;
+    min-height: 80vh;
+    min-width: 100vh;
     background-color: whitesmoke;
     gap: 10px;
     z-index: 2;
     background-color: whitesmoke;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 main>div h2,h1,h3,span {
@@ -48,16 +48,23 @@ main>div h2,h1,h3,span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 #forecastGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    overflow: auto;
+    gap: 30px;
+    margin: 20px;
 }
 
 #dayCard {
-    max-height: 50px;
-    max-width: 70px;
+    border: 1px dashed black;
+    padding: 10px;
+}
+
+.heading {
+    font-size: 32px;
+    margin: 20px;
 }
