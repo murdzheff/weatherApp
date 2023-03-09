@@ -18,17 +18,12 @@ submit.addEventListener("click", (e) => {
     load();
 })
 
-
-
-
+window.addEventListener("load",load);
 
 function load() {
     request.open("GET", api);
     request.send();
     request.responseType = "json";
-
-
-
 
     request.onload = () => {
         console.log(request.response)
@@ -39,12 +34,12 @@ function load() {
         windSpeed.innerText = `Wind speed is: ${request.response.currentConditions.windspeed} km/h ||`;
         hum.innerText = `Humidity: ${request.response.currentConditions.humidity} %`
         grid.innerHTML = "";
+        
         //tests for background
 
         // conditions.innerText = "neshto si";
         // conditions.innerText = "Rain, Overcast";
         //conditions.innerText = "Partially cloudy";
-
 
         if (conditions.innerText === "Partially cloudy") {
             bg.src = "./assets/weatherbg/clouds-16495.mp4";
@@ -82,26 +77,10 @@ function load() {
             dayCard.append(date, img, tempContainer);
 
             grid.appendChild(dayCard);
-
-
-
-
-
-
-
-
         });
-
-
     }
-
-
-
-
-
 }
 
-load();
 
 
 
