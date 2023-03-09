@@ -11,6 +11,13 @@ let api = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/ser
 let input = document.getElementById("input");
 let submit = document.getElementById("submit");
 
+input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        submit.click();
+    }
+})
+
 submit.addEventListener("click", (e) => {
     e.preventDefault();
     console.log(api);
@@ -21,6 +28,8 @@ submit.addEventListener("click", (e) => {
 window.addEventListener("load",load);
 
 function load() {
+    input.value = "";
+
     request.open("GET", api);
     request.send();
     request.responseType = "json";
@@ -80,8 +89,6 @@ function load() {
         });
     }
 }
-
-
 
 
 
