@@ -47,7 +47,7 @@ function load() {
         //tests for background
 
         // conditions.innerText = "neshto si";
-        // conditions.innerText = "Rain, Overcast";
+        // sasonditions.innerText = "Rain, Overcast";
         //conditions.innerText = "Partially cloudy";
 
         if (conditions.innerText === "Partially cloudy") {
